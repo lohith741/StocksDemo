@@ -3,6 +3,7 @@
 ## Database Schema
 
 DataBase Name : stocks_db
+
 csv: 500285.csv
 
 ### Table:
