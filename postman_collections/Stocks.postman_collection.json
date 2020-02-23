@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "1e288f66-6fe7-46fa-ab1a-743a29a32c71",
+		"name": "Stocks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/stocks/getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/stocks/getAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stocks",
+						"getAll"
+					]
+				},
+				"description": "get all stocks"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/stocks/timeRange",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"from\" : \"1/1/2019\",\n\t\"to\": \"1/1/2020\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/stocks/timeRange",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stocks",
+						"timeRange"
+					]
+				},
+				"description": "stocks with time range"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/stocks/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"day\":\"2/1/2020\",\n\t\"openPrice\" :100,\n\t\"highPrice\" :100,\n\t\"lowPrice\" :100,\n\t\"closePrice\" :100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/stocks/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stocks",
+						"update"
+					]
+				},
+				"description": "update stock prices of a day"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/stocks/aggregate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"from\" : \"1/1/2019\",\n\t\"to\":\"1/1/2020\",\n\t\"aggregateType\" :\"month\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/stocks/aggregate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stocks",
+						"aggregate"
+					]
+				},
+				"description": "aggerate stocks by day,week,month"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
